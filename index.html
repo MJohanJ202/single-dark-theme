@@ -14,8 +14,40 @@
 		<link rel="stylesheet" href="src/styles/global.css" />
 		<title>Dark Theme - Tailwind</title>
 	</head>
-	<body class="bg-grayish-50 text-grayish-black">
-		<h1>Start new Challenge</h1>
+	<body
+		class="bg-gray-100 pt-8 px-[min(12%,1.5rem)] text-grayish-black dark:bg-grayish-black dark:text-gray-100 sm:px-[4rem] sm:py-12 transition-colors duration-300"
+	>
+		<header class="grid">
+			<div class="justify-self-end">
+				<label
+					id="toggleTheme"
+					class="grid grid-cols-1 rounded-full bg-grayish-200 place-content-center min-w-[5.5rem]"
+				>
+					<input
+						type="checkbox"
+						class="col-[1] cursor-pointer opacity-0 relative peer row-[1] z-10"
+					/>
+					<div
+						class="bg-white justify-self-end col-[1] outline outline-1 outline-gray-950 pl-3 rounded-full opacity-0 translate-x-full w-14 row-[1] dark:opacity-100 dark:translate-x-0 transition-all duration-300 pointer-events-none"
+					>
+						<img
+							class="w-6 h-7"
+							src="/assets/icons/sun.svg"
+							alt="sun icon theme"
+						/>
+					</div>
+					<div
+						class="bg-white col-[1] outline outline-1 outline-gray-950 pl-3 rounded-full translate-x-0 w-14 row-[1] dark:opacity-0 dark:-translate-x-full transition-all duration-300 pointer-events-none"
+					>
+						<img
+							class="w-6 h-7"
+							src="/assets/icons/moon.svg"
+							alt="moon icon theme"
+						/>
+					</div>
+				</label>
+			</div>
+		</header>
 		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>
